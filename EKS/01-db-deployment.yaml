@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: db
+  namespace: tienda-perritos
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: db
+  template:
+    metadata:
+      labels:
+        app: db
+    spec:
+      containers:
+        - name: db
+          image: 823731292670.dkr.ecr.us-east-1.amazonaws.com/tienda-perritos-db:latest
+          ports:
+            - containerPort: 3306
