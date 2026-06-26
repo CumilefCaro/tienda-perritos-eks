@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: backend
-          image: 823731292670.dkr.ecr.us-east-1.amazonaws.com/tienda-perritos-backend:latest
+          image: 823731292670.dkr.ecr.us-east-1.amazonaws.com/tienda-perritos-backend:v2
           ports:
             - containerPort: 3001
           env:
